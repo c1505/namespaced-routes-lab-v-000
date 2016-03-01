@@ -1,5 +1,14 @@
-<%= form_for(@preference, url: '/') do |f| %>
-  <%= f.radio_button("song_sort_order", "true")  %>
+<%= form_for(@preference, url: '/admin/settings/1') do |f| %>
+  <%= f.label :song_sort_order %>
+  <%= f.radio_button("song_sort_order", "desc", :checked => true)  %>
+  <%= f.radio_button("song_sort_order", "asc")  %><br>
+
+
+
+  <%= f.label :artist_sort_order %>
+  <%= f.radio_button("artist_sort_order", "desc", :checked => true)  %>
+  <%= f.radio_button("artist_sort_order", "asc")  %>
+
 
   <%= f.submit %>
 <% end %>

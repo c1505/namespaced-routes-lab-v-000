@@ -7,5 +7,6 @@ Rails.application.routes.draw do
 
   namespace :admin do 
     resources :settings, only: [:index, :show, :edit, :update, :new]
+    resources :access, only: [:index, :show, :edit, :update, :new]
   end
 end
